@@ -1,0 +1,11 @@
+MaPLe Initialization Comparison
+============================================================
+
+Standard MaPLe:
+  Mean: -0.0010
+  Std:  0.0197
+
+MIPRO MaPLe:
+  Mean: 0.0075
+  Std:  0.1107
+  Init words: satellite, imagery

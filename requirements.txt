@@ -1,0 +1,24 @@
+# Core dependencies
+torch>=1.7.1
+torchvision>=0.8.2
+numpy>=1.19.0
+pillow>=8.0.0
+
+# Vision-Language dependencies
+clip @ git+https://github.com/openai/CLIP.git
+
+# Prompt learning framework
+dassl>=0.5.0
+
+# LLM and DSPy dependencies
+dspy-ai>=2.0.0
+openai>=1.0.0
+
+# Utilities
+ftfy
+regex
+tqdm
+yacs
+matplotlib
+scikit-learn
+scipy

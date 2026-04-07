@@ -1,0 +1,26 @@
+{
+  "setting": "1-shot EuroSAT (10 training samples)",
+  "standard": {
+    "init_type": "random_normal",
+    "mean": -6.374898657668382e-05,
+    "std": 0.0198714230209589,
+    "l2_norm": 0.44930538535118103,
+    "structure_pct": 0.013671875
+  },
+  "mipro": {
+    "init_type": "clip_embeddings",
+    "init_words": [
+      "satellite",
+      "imagery"
+    ],
+    "mean": 0.036196477711200714,
+    "std": 0.14774248003959656,
+    "l2_norm": 3.4300355911254883,
+    "structure_pct": 0.650390625
+  },
+  "expected_accuracy": {
+    "standard": "45-55%",
+    "mipro": "55-65%",
+    "improvement": "+10%"
+  }
+}
