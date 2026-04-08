@@ -2,8 +2,6 @@
 
 ## Research Summary: Optimizing CLIP Descriptors for Satellite Imagery Classification
 
-**Authors:** Research Team  
-**Date:** April 2025  
 **Dataset:** EuroSAT (satellite imagery, 10 classes)  
 **Base Model:** CLIP ViT-B/16
 
