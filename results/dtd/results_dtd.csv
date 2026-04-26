@@ -1,0 +1,4 @@
+dataset,method,top1,top5
+dtd,ZS-handcrafted,44.2,74.63
+dtd,ZS-LLM,45.69,76.28
+dtd,CoCoOp,57.39,86.81

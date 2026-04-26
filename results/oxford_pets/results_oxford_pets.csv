@@ -1,0 +1,4 @@
+dataset,method,top1,top5
+oxford_pets,ZS-handcrafted,88.06,97.49
+oxford_pets,ZS-LLM,90.19,99.32
+oxford_pets,CoCoOp,93.54,99.86

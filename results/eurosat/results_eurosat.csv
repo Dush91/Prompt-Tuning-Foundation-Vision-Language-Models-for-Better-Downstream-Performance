@@ -1,0 +1,4 @@
+dataset,method,top1,top5
+eurosat,ZS-handcrafted,54.3,91.03
+eurosat,ZS-LLM,52.76,94.71
+eurosat,CoCoOp,74.19,97.96
