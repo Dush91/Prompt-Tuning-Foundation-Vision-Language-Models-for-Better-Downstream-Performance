@@ -1,0 +1,7 @@
+{
+    "dataset": "caltech101",
+    "model": "ViT-B/16",
+    "handcrafted_accuracy": 86.69,
+    "cupl_accuracy": 88.02,
+    "improvement": 1.32
+}

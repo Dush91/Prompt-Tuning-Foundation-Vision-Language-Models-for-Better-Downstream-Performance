@@ -1,0 +1,4 @@
+dataset,model,handcrafted_accuracy,cupl_accuracy,improvement
+eurosat,ViT-B/16,45.33,44.78,-0.56
+caltech101,ViT-B/16,86.69,88.02,1.32
+dtd,ViT-B/16,45.32,44.79,-0.53

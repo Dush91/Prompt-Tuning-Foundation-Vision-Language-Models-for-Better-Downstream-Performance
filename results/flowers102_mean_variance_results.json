@@ -1,0 +1,35 @@
+{
+    "dataset": "flowers102",
+    "model": "ViT-B/16",
+    "handcrafted_accuracies": [
+        71.82,
+        71.74,
+        71.8,
+        71.82,
+        70.82,
+        71.44,
+        72.09
+    ],
+    "handcrafted_mean": 71.65,
+    "handcrafted_variance": 0.1437,
+    "cupl_accuracies": [
+        72.08,
+        70.61,
+        71.1,
+        71.77,
+        72.14,
+        72.01,
+        71.41,
+        71.28,
+        71.8,
+        71.39,
+        71.93,
+        72.3,
+        67.6,
+        70.61,
+        72.71
+    ],
+    "cupl_mean": 71.38,
+    "cupl_variance": 1.3494,
+    "mean_improvement": -0.26
+}

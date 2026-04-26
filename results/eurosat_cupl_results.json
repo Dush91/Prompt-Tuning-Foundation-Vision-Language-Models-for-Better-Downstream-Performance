@@ -1,0 +1,7 @@
+{
+    "dataset": "eurosat",
+    "model": "ViT-B/16",
+    "handcrafted_accuracy": 45.33,
+    "cupl_accuracy": 44.78,
+    "improvement": -0.56
+}

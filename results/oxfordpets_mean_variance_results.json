@@ -1,0 +1,35 @@
+{
+    "dataset": "oxfordpets",
+    "model": "ViT-B/16",
+    "handcrafted_accuracies": [
+        88.42,
+        86.86,
+        88.39,
+        89.1,
+        88.55,
+        89.83,
+        85.83,
+        88.5
+    ],
+    "handcrafted_mean": 88.18,
+    "handcrafted_variance": 1.3984,
+    "cupl_accuracies": [
+        89.13,
+        86.86,
+        87.98,
+        89.45,
+        88.55,
+        89.83,
+        83.78,
+        86.07,
+        87.35,
+        88.39,
+        88.85,
+        86.62,
+        85.8,
+        89.23
+    ],
+    "cupl_mean": 87.71,
+    "cupl_variance": 2.7293,
+    "mean_improvement": -0.48
+}

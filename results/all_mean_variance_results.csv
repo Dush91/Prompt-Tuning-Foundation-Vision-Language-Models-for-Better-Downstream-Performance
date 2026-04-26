@@ -1,0 +1,6 @@
+dataset,model,handcrafted_mean,handcrafted_variance,cupl_mean,cupl_variance,mean_improvement
+caltech101,ViT-B/16,85.14,2.9764,86.27,2.4664,1.13
+dtd,ViT-B/16,43.47,1.4094,41.94,3.5687,-1.53
+eurosat,ViT-B/16,42.78,6.8338,42.01,12.7973,-0.77
+oxfordpets,ViT-B/16,88.18,1.3984,87.71,2.7293,-0.48
+flowers102,ViT-B/16,71.65,0.1437,71.38,1.3494,-0.26

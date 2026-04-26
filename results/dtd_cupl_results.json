@@ -1,0 +1,7 @@
+{
+    "dataset": "dtd",
+    "model": "ViT-B/16",
+    "handcrafted_accuracy": 45.32,
+    "cupl_accuracy": 44.79,
+    "improvement": -0.53
+}
