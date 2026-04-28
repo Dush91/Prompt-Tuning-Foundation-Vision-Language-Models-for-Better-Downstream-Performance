@@ -1,0 +1,6 @@
+torch==2.11.0
+torchvision
+git+https://github.com/openai/CLIP.git
+matplotlib
+scikit-learn
+scipy
