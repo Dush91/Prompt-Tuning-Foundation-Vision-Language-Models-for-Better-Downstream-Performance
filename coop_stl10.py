@@ -13,9 +13,6 @@ from torch.utils.data import DataLoader
 
 print("SCRIPT STARTED")
 
-# =====================
-# SETTINGS
-# =====================
 DATA_DIR = "./data"
 RESULTS_DIR = "./results"
 CHECKPOINT_DIR = "./checkpoints"
@@ -36,18 +33,12 @@ torch.manual_seed(SEED)
 device = "cuda" if torch.cuda.is_available() else "cpu"
 print("Using device:", device)
 
-# =====================
-# LOAD CLIP
-# =====================
 clip_model, preprocess = clip.load("ViT-B/32", device=device)
 clip_model.float()
 
 for param in clip_model.parameters():
     param.requires_grad = False
 
-# =====================
-# LOAD STL-10
-# =====================
 train_dataset = datasets.STL10(
     root=DATA_DIR,
     split="train",
@@ -83,9 +74,6 @@ test_loader = DataLoader(
     num_workers=NUM_WORKERS
 )
 
-# =====================
-# TEXT ENCODER
-# =====================
 class TextEncoder(nn.Module):
     def __init__(self, clip_model):
         super().__init__()
@@ -107,9 +95,6 @@ class TextEncoder(nn.Module):
 
         return x
 
-# =====================
-# PROMPT LEARNER
-# =====================
 class PromptLearner(nn.Module):
     def __init__(self, classnames, clip_model, n_ctx=16):
         super().__init__()
@@ -169,9 +154,6 @@ criterion = nn.CrossEntropyLoss()
 train_losses = []
 train_accs = []
 
-# =====================
-# TRAINING
-# =====================
 for epoch in range(EPOCHS):
     prompt_learner.train()
 
@@ -216,9 +198,6 @@ for epoch in range(EPOCHS):
 
     print(f"Epoch [{epoch+1}/{EPOCHS}] Loss: {avg_loss:.4f} Accuracy: {train_acc:.2f}%")
 
-# =====================
-# TESTING
-# =====================
 prompt_learner.eval()
 
 correct = 0
@@ -248,9 +227,6 @@ with torch.no_grad():
 
 test_acc = 100 * correct / total
 
-# =====================
-# MEAN AND VARIANCE
-# =====================
 mean_acc = np.mean(train_accs)
 var_acc = np.var(train_accs, ddof=1)
 
@@ -266,9 +242,6 @@ print(f"Variance Training Accuracy: {var_acc:.4f}")
 print(f"Mean Training Loss: {mean_loss:.4f}")
 print(f"Variance Training Loss: {var_loss:.4f}")
 
-# =====================
-# SAVE CSV
-# =====================
 csv_path = os.path.join(RESULTS_DIR, "stl10_coop_results.csv")
 
 with open(csv_path, "w", newline="") as file:
@@ -288,16 +261,10 @@ with open(csv_path, "w", newline="") as file:
 
 print("CSV saved at:", csv_path)
 
-# =====================
-# SAVE MODEL
-# =====================
 model_path = os.path.join(CHECKPOINT_DIR, "stl10_coop.pth")
 torch.save(prompt_learner.state_dict(), model_path)
 print("Model saved at:", model_path)
 
-# =====================
-# GRAPHS
-# =====================
 plt.figure()
 plt.plot(range(1, EPOCHS + 1), train_losses, marker="o")
 plt.xlabel("Epoch")
