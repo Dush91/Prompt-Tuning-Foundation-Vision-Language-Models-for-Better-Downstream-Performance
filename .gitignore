@@ -1,0 +1,5 @@
+data/
+checkpoints/
+*.pth
+coop_env/
+__pycache__/
