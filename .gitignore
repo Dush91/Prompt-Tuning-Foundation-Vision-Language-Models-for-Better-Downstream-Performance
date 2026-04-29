@@ -1,3 +1,11 @@
+<<<<<<< HEAD
+data/
+coop_env/
+__pycache__/
+*.pyc
+*.pth
+*.pt
+=======
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
@@ -205,3 +213,4 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+>>>>>>> e089479325c6ce0ff74c558d0ccec2c69e912e1a
