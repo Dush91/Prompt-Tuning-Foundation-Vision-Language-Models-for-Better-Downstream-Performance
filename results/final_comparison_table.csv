@@ -1,0 +1,6 @@
+dataset,model,handcrafted_accuracy,coop_accuracy,improvement
+stl10,ViT-B/32,96.92,98.4,1.48
+eurosat,ViT-B/32,43.22,93.09,49.87
+caltech101,ViT-B/32,87.67,95.79,8.12
+flowers102,ViT-B/32,64.99,86.01,21.03
+oxfordpets,ViT-B/32,86.89,91.77,4.88
