@@ -1,6 +1,5 @@
 data/
 coop_env/
-utils.py/
 __pycache__/
 *.pth
 *.pt
