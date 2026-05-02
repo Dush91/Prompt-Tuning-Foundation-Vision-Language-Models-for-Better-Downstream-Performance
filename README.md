@@ -84,7 +84,7 @@ parameter efficiency vs accuracy tradeoff. Training is performed on two datasets
 ## t-SNE Visualisation
 
 ### Caltech-101
-![Caltech t-SNE Cosine](tsne_caltech_r4_cosine.png)
+![Caltech t-SNE Cosine](Images/tsne_caltech_r4_cosine.png)
 Both zero-shot and LoRA fine-tuned CLIP show similar feature separation on Caltech. 
 The improvement is subtle because CLIP already has strong zero-shot representations 
 (84.65%). LoRA refines rather than dramatically restructures the feature space, 
