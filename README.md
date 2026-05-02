@@ -1,5 +1,4 @@
 # CLIP LoRA Fine-tuning — EEEM068 Applied Machine Learning
-## University of Surrey — Spring Term 2026
 
 > Parameter-efficient fine-tuning of CLIP ViT-B/16 using LoRA (Low-Rank Adaptation)  
 > on Caltech-101 and EuroSAT with generalisation tests on Oxford Pets.
