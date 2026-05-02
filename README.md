@@ -205,7 +205,4 @@ output = xW  +  x(AB) × (alpha/rank)
 
 ---
 
-## Author
 
-- **Your Name** — LoRA implementation
-- University of Surrey, EEEM068, Spring 2026
