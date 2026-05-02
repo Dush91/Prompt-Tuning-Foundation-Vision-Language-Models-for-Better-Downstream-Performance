@@ -84,6 +84,7 @@ parameter efficiency vs accuracy tradeoff. Training is performed on two datasets
 ## t-SNE Visualisation
 
 ### Caltech-101
+![Caltech t-SNE Cosine](tsne_caltech_r4_cosine.png)
 Both zero-shot and LoRA fine-tuned CLIP show similar feature separation on Caltech. 
 The improvement is subtle because CLIP already has strong zero-shot representations 
 (84.65%). LoRA refines rather than dramatically restructures the feature space, 
@@ -97,9 +98,11 @@ effectiveness:
   consistent with the poor 43.84% zero-shot accuracy. CLIP was not trained on 
   satellite imagery so features are not discriminative.
 
+![EuroSAT t-SNE Cosine](tsne_eurosat_r4_cosine.png)
 - **LoRA + Cosine (right):** All 10 classes form tight, completely separated clusters 
   with clear empty space between them — directly explaining the 98% test accuracy.
 
+![EuroSAT t-SNE Classifier](tsne_eurosat_r4_classifier.png)
 - **LoRA + Classifier (right):** Fewer distinct clusters despite similar accuracy, 
   explaining the catastrophic generalisation failure (6.82% on Pets). The classifier 
   memorises class patterns without maintaining transferable representations.
