@@ -146,19 +146,18 @@ Patch-level cosine similarity between text prompt features and ViT image patch f
 
 **Oxford Pets — Target: beagle**
 
-![Attention heatmaps — Oxford Pets "beagle"]
+
 
 Both ZS and CoCoOp attention concentrate on the dog's body, but CoCoOp shifts focus more toward the background and torso region while ZS centres more on the face. Both correctly localise the animal, consistent with Oxford Pets being a well-suited domain for CLIP's natural-image pretraining. The small Top-1/Top-5 gap (6–9 pp) reflects this: the model reliably finds the dog but occasionally confuses similar breeds.
 
 **EuroSAT — Target: highway or road**
 
-![Attention heatmaps — EuroSAT "highway or road"]
+
 
 CoCoOp attention aligns more continuously along the road network structure compared to ZS attention, which fires on scattered high-contrast patches (buildings, intersections) with less spatial coherence. This is the clearest example of CoCoOp learning a structurally meaningful prompt: the MetaNet conditions on the aerial image and shifts context toward linear infrastructure features, directly explaining the large Top-1 gain (+19.9 pp) on this dataset.
 
 **DTD — Target: banded**
 
-![Attention heatmaps — DTD "banded"]
 
 Both maps are distributed globally — expected for texture, where the discriminative signal is spatially repetitive rather than localised. CoCoOp attention shows slightly stronger emphasis along horizontal band structures vs the more scattered ZS response, but the difference is subtle, consistent with texture being an image-wide property.
 
