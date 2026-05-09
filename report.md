@@ -13,8 +13,8 @@ This project investigates whether **learned prompt tuning** can close the gap be
 
 | Method | What it learns | Parameters trained |
 |--------|---------------|-------------------|
-| ZS-handcrafted | nothing — ensemble of 80 fixed templates | 0 |
-| ZS-LLM | nothing — 7 task-specific prompts | 0 |
+| ZS-handcrafted | ensemble of 80 fixed templates | 0 |
+| ZS-LLM | 7 task-specific prompts | 0 |
 | CoCoOp | image-conditioned context tokens via MetaNet | ~ctx_dim + MetaNet |
 
 ---
