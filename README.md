@@ -98,11 +98,11 @@ effectiveness:
   consistent with the poor 43.84% zero-shot accuracy. CLIP was not trained on 
   satellite imagery so features are not discriminative.
 
-![EuroSAT t-SNE Cosine](tsne_eurosat_r4_cosine.png)
+![EuroSAT t-SNE Cosine](Images/tsne_eurosat_r4_cosine.png)
 - **LoRA + Cosine (right):** All 10 classes form tight, completely separated clusters 
   with clear empty space between them — directly explaining the 98% test accuracy.
 
-![EuroSAT t-SNE Classifier](tsne_eurosat_r4_classifier.png)
+![EuroSAT t-SNE Classifier](Images/tsne_eurosat_r4_classifier.png)
 - **LoRA + Classifier (right):** Fewer distinct clusters despite similar accuracy, 
   explaining the catastrophic generalisation failure (6.82% on Pets). The classifier 
   memorises class patterns without maintaining transferable representations.
