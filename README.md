@@ -84,31 +84,39 @@ parameter efficiency vs accuracy tradeoff. Training is performed on two datasets
 ## t-SNE Visualisation
 
 ### Caltech-101
+
+**LoRA + Cosine:**
 ![Caltech t-SNE Cosine](Images/tsne_caltech_r4_cosine.png)
-Both zero-shot and LoRA fine-tuned CLIP show similar feature separation on Caltech. 
-The improvement is subtle because CLIP already has strong zero-shot representations 
-(84.65%). LoRA refines rather than dramatically restructures the feature space, 
+Both zero-shot and LoRA fine-tuned CLIP show similar cluster structure on Caltech.
+The improvement is subtle because CLIP already has strong zero-shot representations
+(84.65%). LoRA slightly tightens the clusters and increases inter-class separation,
 consistent with the moderate +10% accuracy gain.
 
+**LoRA + Classifier:**
+![Caltech t-SNE Classifier](Images/tsne_caltech_r4_classifier.png)
+Clusters are less compact and show more overlap between classes compared to the
+cosine variant. Although both use the same LoRA weights, the classifier head forces
+Caltech-specific features that reduce transferability, explaining the poor
+generalisation (17.83% on Oxford Pets).
+
 ### EuroSAT — Most Striking Result
-The EuroSAT t-SNE plots provide the most compelling visual evidence of LoRA's 
-effectiveness:
 
-- **Zero-shot CLIP (left):** All 10 classes heavily overlapping and scattered — 
-  consistent with the poor 43.84% zero-shot accuracy. CLIP was not trained on 
-  satellite imagery so features are not discriminative.
-
+**LoRA + Cosine:**
 ![EuroSAT t-SNE Cosine](Images/tsne_eurosat_r4_cosine.png)
-- **LoRA + Cosine (right):** All 10 classes form tight, completely separated clusters 
-  with clear empty space between them — directly explaining the 98% test accuracy.
+The most dramatic improvement across all four plots. Zero-shot CLIP (left) shows
+heavily overlapping, scattered features — consistent with the poor 43.84% accuracy.
+After LoRA fine-tuning, clusters become tight and well-separated with clear empty
+space between classes, directly explaining the 98% test accuracy.
 
+**LoRA + Classifier:**
 ![EuroSAT t-SNE Classifier](Images/tsne_eurosat_r4_classifier.png)
-- **LoRA + Classifier (right):** Fewer distinct clusters despite similar accuracy, 
-  explaining the catastrophic generalisation failure (6.82% on Pets). The classifier 
-  memorises class patterns without maintaining transferable representations.
+Despite similar test accuracy (97.75%), clusters are less compact and more spread
+out compared to the cosine variant. This weaker feature structure explains the
+catastrophic generalisation failure (6.82% on Pets) — the classifier memorises
+EuroSAT-specific patterns without maintaining transferable representations.
 
-This contrast between cosine and classifier t-SNE plots is the strongest visual 
-evidence that classification head choice matters as much as the fine-tuning method itself.
+This contrast between cosine and classifier plots is the strongest visual evidence
+that classification head choice matters as much as the fine-tuning method itself.
 
 ---
 
