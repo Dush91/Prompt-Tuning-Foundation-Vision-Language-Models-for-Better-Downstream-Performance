@@ -152,12 +152,12 @@ Both ZS and CoCoOp attention concentrate on the dog's body, but CoCoOp shifts fo
 
 **EuroSAT — Target: highway or road**
 
-
+![EuroSAT Heatmap](results/eurosat/heatmap_eurosat.png)
 
 CoCoOp attention aligns more continuously along the road network structure compared to ZS attention, which fires on scattered high-contrast patches (buildings, intersections) with less spatial coherence. This is the clearest example of CoCoOp learning a structurally meaningful prompt: the MetaNet conditions on the aerial image and shifts context toward linear infrastructure features, directly explaining the large Top-1 gain (+19.9 pp) on this dataset.
 
 **DTD — Target: banded**
-
+![DTD Heatmap](results/dtd/heatmap_dtd.png)
 
 Both maps are distributed globally — expected for texture, where the discriminative signal is spatially repetitive rather than localised. CoCoOp attention shows slightly stronger emphasis along horizontal band structures vs the more scattered ZS response, but the difference is subtle, consistent with texture being an image-wide property.
 
