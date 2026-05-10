@@ -145,7 +145,7 @@ EuroSAT has the largest Top-5/Top-1 gap under zero-shot (up to 41.9 pp for ZS-LL
 Patch-level cosine similarity between text prompt features and ViT image patch features, comparing ZS vs CoCoOp for the same input.
 
 **Oxford Pets — Target: beagle**
-
+![Oxford Pets Heatmap](results/oxford_pets/heatmap_oxford_pets.png)
 
 
 Both ZS and CoCoOp attention concentrate on the dog's body, but CoCoOp shifts focus more toward the background and torso region while ZS centres more on the face. Both correctly localise the animal, consistent with Oxford Pets being a well-suited domain for CLIP's natural-image pretraining. The small Top-1/Top-5 gap (6–9 pp) reflects this: the model reliably finds the dog but occasionally confuses similar breeds.
